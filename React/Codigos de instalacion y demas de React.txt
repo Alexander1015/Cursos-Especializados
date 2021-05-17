@@ -1,0 +1,59 @@
+		ReactJS
+
+* Para crear un proyecto en react:	(Solución obtenida en: https://reactjs.org/docs/create-a-new-react-app.html#create-react-app)
+	npx create-react-app my-app		(<- "my-app" el nombre del proyecto)
+	cd my-app
+	npm start				(<- Carga el proyecto)
+
+* Si lo anterior no funciona utilizar: (Solución obtenida en: https://dev.to/crisfer4217/como-crear-un-proyecto-de-react-js-desde-0-create-react-app-49f6)
+	npm install -g create-react-app
+	create-react-app			(<- Esto verifica si se instalo correctamente)
+	create-react-app my-app			(<- "my-app" el nombre del proyecto)
+	cd my-app
+	npm start				(<- Carga el proyecto)
+
+
+* Instalar dependencias de package.json: "npm install"
+
+* Instalar React-Router-Dom en npm: "npm i react-router-dom"
+
+		Información Obtenida de (Fazt):
+			https://www.youtube.com/watch?v=zIY87vU33aA&list=PLZ4gEj_WqIK1AU2xUxqSkWzbXwqRVWsGy&index=2&t=21s
+
+
+* React.js Hooks
+
+	//Para importar los Hooks
+	import React, { useEffect, useState } from 'react';
+
+	function useMihook() {		//el "use" simboliza que es Hook
+
+		const [variable, setVariable] = useState({	
+			var1: "...",
+			var2: "..."
+		});	//El "setVariable" es una funcion que se declara mas adelante para cambiar la "variable"
+
+
+
+
+		useEffect(() => {	//Para operaciones externas a React
+			...	//Aqui se implementa el codigo que seguira React para APIS externas
+			setVariable({
+				var1: "###"; //Codigo que ejecutara React de APIS externas
+			});
+
+			
+			return () => {			//Cuando termina de ejecutar lo anterior
+				... //Codigo de API externa
+			};
+		});
+	};
+
+	//Utilizar el hook
+	const datos = useVariable();
+	
+	return datos.var1; //O "datos.var2"
+
+
+		Información obtenida de (Appdelante):
+			https://www.youtube.com/watch?v=ISGCTngdp8c

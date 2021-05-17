@@ -1,0 +1,31 @@
+{
+  "name": "curso-de-node",
+  "version": "0.0.1",
+  "description": "Curso de NodeJS",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "desarrollo": "node Conocimiento-basico.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexander1015/Curso-NodeJS.git"
+  },
+  "keywords": [
+    "nodejs",
+    "curso",
+    "2020",
+    "2021"
+  ],
+  "author": "Alexander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexander1015/Curso-NodeJS/issues"
+  },
+  "homepage": "https://github.com/Alexander1015/Curso-NodeJS#readme"
+}

@@ -1,0 +1,52 @@
+	- Instalar Laravel en xampp/htdocs con Composer :
+
+		composer global require laravel/installer
+
+	- Crear un proyecto de laravel:
+		laravel new "nombre-proyecto"
+
+	- Antes de iniciar un proyecto nuevo (o descargado) usar:
+		composer update
+		php artisan serve
+
+	- Para poder utilizar un proyecto en otra maquina es necesario:
+		- Generar el ".env"
+		- Generar la "clave" de encriptación luego del paso anterior
+
+	- Abrir el proyecto en el navegador: localhost/nombre-proyecto/public
+
+	- Para conectar la BD a laravel, en el archivo ".env" buscar lo siguiente:
+		DB_CONNECTION=mysql
+		DB_HOST=127.0.0.1
+		DB_PORT=3306
+		DB_DATABASE=curso-de-laravel
+		DB_USERNAME=root
+		DB_PASSWORD=
+
+
+	- Para que corra las migraciones:   
+		php artisan migrate
+
+	- Para crear migraciones: (create_nombre_table convencion)
+		php artisan make:migration create_cursos_table
+
+	- Para revertir la ultima migración:
+		php artisan migrate:rollback
+
+	- Recorre las migraciones que ya se realizaron por cambios (No recomendable en producción)
+		php artisan migrate:fresh
+
+	- Para agregar nuevos campos a una tabla ('avatar' es el campo y 'users' la tabla)
+		php artisan make:migration add_avatar_to_users_table
+
+	- Para crear modelos:
+		php artisan make:model "nombre"
+
+	- Para crear seed:
+		php artisan make:seeder "nombreSeeder"
+
+	- Procesar seeder
+		php artisan db:seed
+
+	- Procesar las tablas y seeder en un proyecto acabado de obtener
+		php artisan migrate --seeder
